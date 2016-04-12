@@ -1,7 +1,7 @@
 {
   "name": "ember-mu-transform-helpers",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Transform helpers for mu.semte.ch. See http://mu.semte.ch/.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -15,7 +15,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Erika Pauwels <erika.pauwels@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -39,7 +39,8 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "mu-semtech"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6"
