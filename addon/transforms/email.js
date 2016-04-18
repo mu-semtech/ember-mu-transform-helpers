@@ -2,7 +2,7 @@ import Transform from 'ember-data/transform';
 
 export default Transform.extend({
   deserialize(serialized) {
-    if(serialized.match(/^mailto:/)) {
+    if(serialized && serialized.match(/^mailto:/)) {
       return serialized.substring('mailto:'.length);
     } else {
       return serialized;
@@ -10,6 +10,10 @@ export default Transform.extend({
   },
 
   serialize(deserialized) {
-    return 'mailto:' + deserialized;
+    if (deserialized) {
+      return 'mailto:' + deserialized;
+    } else {
+      return deserialized;
+    }
   }
 });
