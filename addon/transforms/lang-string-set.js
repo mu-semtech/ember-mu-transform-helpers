@@ -1,14 +1,15 @@
-import DS from 'ember-data'
+import Ember from 'ember';
+import Transform from 'ember-data/transform';
 
-LangString = Ember.Object.extend();
-LangStringSet = DS.Transform.extend({
+export default Transform.extend({
   deserialize: function (serialized) {
-    if (serialized && Ember.typeOf(serialized) == 'array')
-      serialized.map((o) -> LangString.create(o));
-    else
-      throw "lang string set should be an array"
+    if (serialized && Ember.typeOf(serialized) === 'array') {
+      serialized.map(function(o) { Ember.Object.create(o); });
+    } else {
+      throw "lang string set should be an array";
+    }
   },
   serialize: function (deserialized) {
-    deserialized
+    return deserialized;
+  }
 });
-export default LangStringSet
