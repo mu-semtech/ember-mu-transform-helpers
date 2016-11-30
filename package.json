@@ -1,6 +1,6 @@
 {
   "name": "ember-mu-transform-helpers",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Transform helpers for mu.semte.ch. See http://mu.semte.ch/.",
   "directories": {
     "doc": "doc",
