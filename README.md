@@ -9,8 +9,10 @@ ember install ember-mu-transform-helpers
 
 ## Transforms
 The following transforms are available:
+* date
+* datetime
 * email
-* phone
 * language-string
 * language-string-set
+* phone
 * string-set
