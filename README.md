@@ -11,4 +11,6 @@ ember install ember-mu-transform-helpers
 The following transforms are available:
 * email
 * phone
-* lang-string-set
+* language-string
+* language-string-set
+* string-set
