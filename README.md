@@ -16,3 +16,4 @@ The following transforms are available:
 * language-string-set
 * phone
 * string-set
+* uri-set
