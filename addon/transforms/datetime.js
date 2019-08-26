@@ -1,3 +1,3 @@
-import DateTransform from 'ember-data/transforms/date';
+import DS from 'ember-data';
 
-export default DateTransform;
+export default DS.DateTransform;
