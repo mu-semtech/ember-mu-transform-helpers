@@ -7,6 +7,10 @@ Ember [transform](http://emberjs.com/api/data/classes/DS.Transform.html) helpers
 ember install ember-mu-transform-helpers
 ```
 
+## Compatibility
+* For ember-data >= v3.12, use ember-mu-transform-helpers:2.x
+* For ember-data < v3.12, use ember-mu-transform-helpers:1.x
+
 ## Transforms
 The following transforms are available:
 * date
