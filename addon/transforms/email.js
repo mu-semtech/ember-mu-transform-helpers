@@ -17,7 +17,7 @@ export default Transform.extend({
     if (deserialized) {
       return 'mailto:' + deserialized;
     } else {
-      return deserialized;
+      return null;
     }
   }
 });

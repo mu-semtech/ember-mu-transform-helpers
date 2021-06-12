@@ -17,7 +17,7 @@ export default Transform.extend({
     if (deserialized) {
       return 'tel:' + deserialized;
     } else {
-      return deserialized;
+      return null;
     }
   }
 });
