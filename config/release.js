@@ -7,7 +7,7 @@ module.exports = {
   // remote: 'some_remote',
   // annotation: "Release %@",
   // message: "Bumped version to %@",
-  manifest: [ 'package.json', 'package-lock.json']
+  manifest: ['package.json', 'package-lock.json'],
   // publish: true,
   // strategy: 'date',
   // format: 'YYYY-MM-DD',
