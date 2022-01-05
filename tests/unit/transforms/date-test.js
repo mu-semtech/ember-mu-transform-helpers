@@ -12,9 +12,9 @@ module('transform:date', 'Unit | Transform | date', function (hooks) {
     let deserialized = transform.deserialize('2021-12-21');
 
     assert.ok(deserialized instanceof Date);
-    assert.equal(deserialized.getDate(), 21);
-    assert.equal(deserialized.getMonth(), 11);
-    assert.equal(deserialized.getFullYear(), 2021);
+    assert.strictEqual(deserialized.getDate(), 21);
+    assert.strictEqual(deserialized.getMonth(), 11);
+    assert.strictEqual(deserialized.getFullYear(), 2021);
   });
 
   test('it serializes dates to ISO 8601 format without time information', function (assert) {
@@ -25,6 +25,11 @@ module('transform:date', 'Unit | Transform | date', function (hooks) {
     let date = new Date('2020-05-18');
     let serialized = transform.serialize(date);
 
-    assert.equal(serialized, '2020-05-18');
+    assert.strictEqual(serialized, '2020-05-18');
+
+    date = new Date('2022-01-05T00:00:00');
+    serialized = transform.serialize(date);
+
+    assert.strictEqual(serialized, '2022-01-05');
   });
 });
