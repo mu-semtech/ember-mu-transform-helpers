@@ -13,6 +13,18 @@ export default class LanguageStringSetTransform extends Transform {
       return new LangString(item['content'], item['language']);
     });
 
+    serialized.first = (language) => {
+      return serialized.find((langString) => langString.language == language)?.content;
+    };
+
+    serialized.lang = (language) => {
+      return serialized
+        .filter((langString) => langString.language == language)
+        .map((langString) => langString.content);
+    };
+
+    serialized.default = serialized.first('nl');
+
     return serialized;
   }
 
