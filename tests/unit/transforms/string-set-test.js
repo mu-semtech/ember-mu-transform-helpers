@@ -1,11 +1,11 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('Unit | Transform | uri set', function (hooks) {
+module('Unit | Transform | string set', function (hooks) {
   setupTest(hooks);
 
   test('deserialize', function (assert) {
-    let transform = this.owner.lookup('transform:uri-set');
+    let transform = this.owner.lookup('transform:string-set');
 
     let stringSet = ['foo', 'bar'];
     assert.strictEqual(transform.deserialize(stringSet), stringSet);
@@ -27,7 +27,7 @@ module('Unit | Transform | uri set', function (hooks) {
   });
 
   test('serialize', function (assert) {
-    let transform = this.owner.lookup('transform:uri-set');
+    let transform = this.owner.lookup('transform:string-set');
 
     let stringSet = ['foo', 'bar'];
     assert.strictEqual(transform.serialize(stringSet), stringSet);
