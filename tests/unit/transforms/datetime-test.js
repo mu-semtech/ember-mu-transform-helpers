@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('transform:datetime', 'Unit | Transform | datetime', function (hooks) {
+module('Unit | Transform | datetime', function (hooks) {
   setupTest(hooks);
 
   // Replace this with your real tests.
