@@ -1,6 +1,6 @@
-import { DateTransform as BaseDateTransform } from '@ember-data/serializer/-private';
+import DateTimeTransform from './datetime';
 
-export default class DateTransform extends BaseDateTransform {
+export default class DateTransform extends DateTimeTransform {
   serialize(date) {
     if (date instanceof Date) {
       return formatISODate(date);
