@@ -10,7 +10,8 @@ export default class PhoneTransform extends Transform {
         warn(
           `Expected telephone URI but got ${JSON.stringify(
             serialized
-          )} as value`
+          )} as value`,
+          { id: 'ember-mu-transform-helpers:phone' }
         );
       }
     }

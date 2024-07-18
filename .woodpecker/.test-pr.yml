@@ -1,0 +1,31 @@
+steps:
+  install:
+    image: danlynn/ember-cli:5.8.0-node_20.12
+    commands:
+      - npm install
+  lint-js:
+    image: danlynn/ember-cli:5.8.0-node_20.12
+    group: lint
+    commands:
+      - npm run lint:js
+  lint-hbs:
+    image: danlynn/ember-cli:5.8.0-node_20.12
+    group: lint
+    commands:
+      - npm run lint:hbs
+  # Our current Ember blueprint doesn't include css linting yet
+  # lint-css:
+  #   image: danlynn/ember-cli:5.8.0-node_20.12
+  #   group: lint
+  #   commands:
+  #     - npm run lint:css
+  test:
+    image: danlynn/ember-cli:5.8.0-node_20.12
+    commands:
+      - npm run test:ember
+  test-ember-data-5.3.4:
+    image: danlynn/ember-cli:5.8.0-node_20.12
+    commands:
+      - npx ember try:one ember-data-5.3.4
+when:
+  event: pull_request

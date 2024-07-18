@@ -8,7 +8,8 @@ export default class EmailTransform extends Transform {
         return serialized.substring('mailto:'.length);
       } else {
         warn(
-          `Expected email URI but got ${JSON.stringify(serialized)} as value`
+          `Expected email URI but got ${JSON.stringify(serialized)} as value`,
+          { id: 'ember-mu-transform-helpers:email' }
         );
       }
     }
