@@ -7,18 +7,35 @@ module.exports = async function () {
   return {
     scenarios: [
       {
-        name: 'ember-lts-3.16',
+        name: 'ember-data-5.3.4',
         npm: {
           devDependencies: {
-            'ember-source': '~3.16.0',
+            'ember-data': '^5.3.4',
+            'ember-inflector': '^4.0.0',
+          },
+          dependencies: {
+            // These are needed for the build to succeed
+            'ember-cli-babel': '^8.2.0',
+            '@babel/core': '^7.12.0',
+          },
+          overrides: {
+            '@ember/test-helpers': '$@ember/test-helpers',
           },
         },
       },
       {
-        name: 'ember-lts-3.20',
+        name: 'ember-lts-3.24',
         npm: {
           devDependencies: {
-            'ember-source': '~3.20.5',
+            'ember-source': '~3.24.3',
+          },
+        },
+      },
+      {
+        name: 'ember-lts-3.28',
+        npm: {
+          devDependencies: {
+            'ember-source': '~3.28.0',
           },
         },
       },
@@ -69,6 +86,9 @@ module.exports = async function () {
           }),
         },
         npm: {
+          devDependencies: {
+            'ember-source': '~3.28.0',
+          },
           ember: {
             edition: 'classic',
           },

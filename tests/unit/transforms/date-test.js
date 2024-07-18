@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('transform:date', 'Unit | Transform | date', function (hooks) {
+module('Unit | Transform | date', function (hooks) {
   setupTest(hooks);
 
   test('it deserializes date strings properly', function (assert) {
